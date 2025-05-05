@@ -1,0 +1,22 @@
+﻿{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>Вхід</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Увійти">
+    </form>
+    <p>Не маєте акаунту? <a href="{% url 'register' %}">Зареєструватись</a></p>
+</div>
+
+
+
+
+
+
+{% endblock content %}
